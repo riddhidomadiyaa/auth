@@ -77,7 +77,7 @@ exports.getdata = async(req, res) => {
         return item;
     }).filter(item => item.sizes.length > 0);
 
-    const skip = limit * (req.body.currentPage - 1);
+    const skip = limit * (currentPage - 1);
     const records = phone.slice(skip, skip + limit);
     const totalPages = Math.ceil(phone.length / limit);
 
