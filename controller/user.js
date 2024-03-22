@@ -178,3 +178,9 @@ let name = data1(data)
 // filter condition true hoi to data return kre che
 
 
+let arr = ["riya", "tiya", "jiya"]
+let arr1 = arr.push("riddhi")
+// let arr1 = arr.pop()
+// let arr1 = arr.shift()
+// let arr1 = arr.unshift("riddhi")
+console.log(arr, "==");
