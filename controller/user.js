@@ -71,8 +71,8 @@ exports.getdata = async(req, res) => {
     let currentPage = req.body.currentPage
     let limit = req.body.limit
     
-    const phone = await Phone.find({userId: req.user._id})
-    const filteredData = phone.map(item => {
+    let phone = await Phone.find({userId: req.user._id})
+    phone =  phone.map(item => {
         item.sizes = item.sizes.filter(sizes => sizes.size > 7 && sizes.size < 15);
         return item;
     }).filter(item => item.sizes.length > 0);
@@ -83,7 +83,7 @@ exports.getdata = async(req, res) => {
 
     res.status(200).json({
         message: "user get",
-        data: { records, currentPage, totalPages, filteredData }
+        data: { records, currentPage, totalPages }
     })
 }
 
