@@ -204,6 +204,12 @@ console.log("b =", b); // Output: b = 10
 //       * *
 //         *
 
+// * * * * *
+// *       *
+// *       *
+// *       *
+// * * * * *
+
 let n = 5
 
 var st = ""
@@ -222,8 +228,26 @@ for (let i = n; i >= 1; i--) {
         
     }
     for (let k = 1; k <= i; k++) {
-        str += "*"
+        if(k%2 == 0){
+            str += 0 + " "
+        } else {
+            str += 1 + " "
+        }
+        // str += "*"
     }
     str += "\n"
 }
 console.log(str);
+
+let string = ""
+for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= n; j++) {
+        if(i == 1  || i == 5 || j == 1 || j == 5){
+            string += "* "
+        } else {
+            string += "  "
+        }
+    }
+    string += "\n"
+}
+console.log(string);
