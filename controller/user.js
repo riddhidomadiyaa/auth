@@ -184,3 +184,46 @@ let arr1 = arr.push("riddhi")
 // let arr1 = arr.shift()
 // let arr1 = arr.unshift("riddhi")
 console.log(arr, "==");
+
+var a = 10;
+var b = 20;
+[a, b] = [b, a];
+console.log("a =", a); // Output: a = 20
+console.log("b =", b); // Output: b = 10
+
+
+// * * * * *
+// * * * *
+// * * *
+// * *
+// *
+
+// * * * * *
+//   * * * *
+//     * * *
+//       * *
+//         *
+
+let n = 5
+
+var st = ""
+for (let i = n; i >= 1; i--) {
+    for (let j = 1; j <= i; j++) {
+        st += "* "
+    }
+    st += "\n"
+}
+console.log(st);
+
+let str = ""
+for (let i = n; i >= 1; i--) {
+    for (let j = 1; j <= n-i; j++) {
+       str += " "
+        
+    }
+    for (let k = 1; k <= i; k++) {
+        str += "*"
+    }
+    str += "\n"
+}
+console.log(str);
