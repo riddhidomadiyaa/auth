@@ -251,3 +251,70 @@ for (let i = 1; i <= n; i++) {
     string += "\n"
 }
 console.log(string);
+
+let arr2 = [4, 2, 8, 5, 6]
+let max = 0
+for (let i = 0; i < arr2.length; i++) {
+    if(arr2[i] > max){
+        max = arr2[i]
+    }
+}
+console.log(max, "max");
+
+let min = arr2[0]
+for (let i = 0; i < arr2.length; i++) {
+    if(arr2[i] < min){
+        min = arr2[i]
+    }
+}
+console.log(min, "min");
+
+let total = 0
+for (let i = 0; i < arr2.length; i++) {
+   total += arr2[i]
+}
+console.log(total, "total");
+
+let even = []
+let odd = []
+for (let i = 0; i < arr2.length; i++) {
+    if(arr2[i]%2 == 0){
+        even.push(arr2[i])
+    } else {
+        odd.push(arr2[i])
+    }
+}
+console.log(even, "even");
+console.log(odd, "odd");
+
+let arrobj = [{a: 5, d: 10}, {b: 2}, {c: 15}]
+let total1 = 0
+for (let i = 0; i < arrobj.length; i++) {
+    let obj = arrobj[i]
+    for(let a in obj){
+        total1 += obj[a]
+    }
+}
+console.log(total1, "total1");
+
+let max1 = 0
+for (let i = 0; i < arrobj.length; i++) {
+    let obj = arrobj[i]
+    for(let a in obj){
+        if(obj[a] > max1){
+            max1 = obj[a]
+        }
+    }
+}
+console.log(max1, "max1");
+
+let min1 = arrobj[0].a
+for (let i = 0; i < arrobj.length; i++) {
+    let obj = arrobj[i]
+    for(let a in obj){
+        if(obj[a] < min1){
+            min1 = obj[a]
+        }
+    }
+}
+console.log(min1, "min1");
